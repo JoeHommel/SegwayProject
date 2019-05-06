@@ -1,0 +1,464 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.navbar-top {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: #222222;
+}
+.navbar-top .nav-item {
+  text-align: center;
+}
+
+.navbar-side {
+  width: 190px;
+  box-sizing: border-box;
+  overflow: auto;
+  list-style: none;
+  background-color: #222222;
+  display: flex;
+  flex: 3;
+  height: 100%;
+  overflow: hidden;
+  max-width: 200px;
+}
+
+.nav-item {
+  flex: 1;
+  padding: 10px 10px;
+  -webkit-transition: 0.5s ease;
+  -ms-transform: 0.5s ease;
+  transition: 0.5s ease;
+  color: #ffffff;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  margin: 3px;
+  width: 170px;
+}
+.nav-item a {
+  color: #ffffff;
+}
+
+.nav-spacer {
+  flex: 10;
+}
+
+.nav-item:hover {
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.nav-a {
+  flex: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 10px;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.8em;
+}
+
+hr {
+  width: 90%;
+  margin-left: 0px;
+  margin-top: 30px;
+  border-top: 1px solid #222222;
+  margin-bottom: 1rem;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+a {
+  color: #007cc0;
+  text-decoration: none;
+}
+
+table {
+  width: 80%;
+  margin: auto;
+  color: #222222;
+  border-color: #454d55;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  font-family: "Roboto", sans-serif;
+}
+table .theader {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: left;
+}
+table tr :hover {
+  background-color: rgba(34, 34, 34, 0.075);
+}
+
+form {
+  display: inline;
+}
+form label {
+  font-size: 1.2em;
+  flex: 1;
+}
+form input {
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+  padding: 5px 0px 5px 10px;
+}
+form .input-same-line {
+  width: 90%;
+  box-sizing: border-box;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+  padding: 5px 0px 5px 10px;
+}
+
+code {
+  background-color: #eff0f1;
+  padding: 10px;
+  font-size: 14px;
+  font-family: monospace;
+  word-wrap: normal;
+}
+
+.code-block {
+  display: flex;
+  white-space: pre;
+  margin: 1em 0px;
+  width: 90%;
+  padding: 5px;
+  border: 0.5px solid #222222;
+  border-left: 2px solid #007cc0;
+}
+
+button {
+  background: #222222;
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1em;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #007cc0;
+  text-decoration: none;
+}
+
+.light {
+  background-color: #f2f2f2;
+  color: #222222;
+}
+.light a {
+  color: #222222;
+}
+.light .nav-item:hover {
+  border-top: 2px solid #222222;
+  border-bottom: 2px solid #222222;
+}
+
+.melon {
+  background: #87E752;
+  color: #FF37A6;
+}
+.melon a {
+  color: #222222;
+}
+.melon .nav-item:hover {
+  border-top: 2px solid #FF37A6;
+  border-bottom: 2px solid #FF37A6;
+}
+
+.dropdown-btn {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+/* .dropdown-btn:hover,
+  .dropbtn:focus {
+    background-color: #2980B9;
+  } */
+/* The container <div> - needed to position the dropdown content */
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+} */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #343a40;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #f2f2f2;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.modal-header {
+  padding: 1px 16px;
+  background-color: #222222;
+  color: white;
+}
+
+.modal-body {
+  padding: 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #222222;
+  color: white;
+}
+
+.close {
+  color: #f2f2f2;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #f2f2f2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* SlideShow */
+.slides {
+  display: none;
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.sliderImg {
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 18px;
+  transition: 0.6s ease;
+  /* border-radius: 0 3px 3px 0; */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 35%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.progressCont {
+  width: 90%;
+  background-color: #ddd;
+}
+
+.progressBar {
+  width: 1%;
+  height: 30px;
+  background-color: blueviolet;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#full {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#cont {
+  margin-left: 40px;
+  flex: 9;
+  min-width: 500px;
+}
+
+#tableExample {
+  width: 90%;
+  margin-left: 0px;
+}
+
+#header-example {
+  width: 90%;
+}
+
+/*# sourceMappingURL=style.css.map */
