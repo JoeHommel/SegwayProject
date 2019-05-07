@@ -9,8 +9,18 @@
 
 .nav-item {
     margin: auto;
+    user-select: none;
+    cursor: pointer;
 }
 
-#icon{
-    
+#icon {
+    width: 50%;
+}
+
+.nav-icon {
+    flex: 1;
+    padding: 10px 10px;
+    margin: 3px;
+    width: 170px;
+    cursor: pointer;
 }
