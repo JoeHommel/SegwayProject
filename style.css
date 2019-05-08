@@ -24,3 +24,41 @@
     width: 170px;
     cursor: pointer;
 }
+
+#nav-side {
+    flex: 1;
+    flex-direction: column;
+    min-width: 100px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex: 10;
+}
+
+#imgHolder {
+    flex: 1;
+}
+
+#CustomizersHolder {
+    flex: 1.5;
+    border: 1px solid #000000;
+}
+
+#CustomizeHeader {
+    /* text-align: center; */
+    flex: 1;
+    /* margin-left: 20%; */
+    padding: 10px;
+}
+
+#lay {
+    margin-left: 15%;
+    width: 400px;
+    position: absolute;
+}
+
+/* #Seg-img-cont{
+    border: 1px solid #000000;
+} */
