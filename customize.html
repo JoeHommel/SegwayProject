@@ -13,37 +13,50 @@
 <body>
     <div id="full">
         <ul id="nav-head" class="navbar-top light">
-            <!-- <li class="nav-icon">
+            <li class="nav-icon">
                 <a href="#index" class="nav-a">
                     <img id="icon" src="Images\icon.png" alt="">
                 </a>
-            </li> -->
-            <li class="nav-item">
-                <a href="Index.html" class="nav-a">Home</a>
             </li>
-            <li class="nav-item">
-                <a href="customize.html" class="nav-a">Customize</a>
-            </li>
-            <li class="nav-item">
-                <a href="About.html" class="nav-a">About</a>
-            </li>
+            <a class="nav-a nav-item" href="index.html">
+                <li>
+                    Home
+                </li>
+            </a>
+            <a class="nav-a nav-item" href="customize.html">
+                <li>
+                    Customize
+                </li>
+            </a>
             <li class="nav-spacer">
                 <a></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-a">login</a>
-            </li>
+            <a class="nav-a nav-item" href="about.html">
+                <li>
+                    About
+                </li>
+            </a>
         </ul>
-        <div id="content">
+        <div id="customize-content">
+            <div id="CustomizersHolder">
+
+            </div>
             <div id="imgHolder">
                 <h4 id="CustomizeHeader">Customize your segway</h4>
                 <div id="Seg-img-cont">
                     <img id="lay" src="Images/imagelayortest1.png">
                     <img id="lay" src="Images/imagelayortest2.png">
                 </div>
-            </div>
-            <div id="CustomizersHolder">
-
+                <div>
+                    <ul id="prices">
+                        <li>Feature 123531535 : $500</li>
+                        <li>Feature : $500</li>
+                        <li>Feature : $500</li>
+                        <li>Feature : $500</li>
+                    </ul>
+                    <hr>
+                    <h4 id="total-money">$money</h4>
+                </div>
             </div>
             <!-- Create more imgs in js, and remove them -->
         </div>
