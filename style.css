@@ -45,6 +45,7 @@ hr{
     display: flex;
     flex-direction: row;
     flex: 10;
+    overflow: auto;
 }
 
 #customize-content {
