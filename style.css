@@ -118,3 +118,7 @@ hr{
 /* #Seg-img-cont{
     border: 1px solid #000000;
 } */
+
+#colors, #wheels, #engines, #customs{
+    display: flex;
+}
