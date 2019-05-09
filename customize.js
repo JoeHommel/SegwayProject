@@ -1,32 +1,29 @@
-// var container = document.getElementById('Seg-img-cont');
-// function buildImgLayer(item) {
-//     var build;
-//     build = document.createElement('img');
-//     build.setAttribute('id', 'lay');
-//     // build.src = `Images/${item}.png`;
-//     build.src = `Images/imagelayortest2.png`;
-//     container.appendChild(build);
-// }
-// buildImgLayer();
-
 var Color = document.getElementById('colorOptions');
 var colorNames = ['Black', 'Blue', 'Green', 'Red', 'White'];
+var wheels = ['OffRoad', 'MadMax', '3', '4', '5'];
+var Engines = ['1', '2', '3', '4', '5'];
+var Customs = ['1', '2', '3', '4', '5', '6', '7', '8'];
 var buttons = [];
+var name = "";
 
 buildButtons();
 
 function buildButtons() {
-    colorNames.forEach(buildButton);
-    
+    //build nav
+    name = "colors";
+    colorNames.forEach(buildButton); //colors
+    name = "wheels";
+    wheels.forEach(buildButton);//wheels
+    name = "engines";
+    Engines.forEach(buildButton);//engines
+    name = "customs";
+    Customs.forEach(buildButton);//custom upgrades
 }
 
 function buildButton(item, index, arr) {
-    // console.log(item);
-    buttons[index] = document.createElement('div');
-    console.log(`url("Images/Segway ${item}.png");`);
-    buttons[index].style.backgroundImage = `url("Images/Segway ${item}.png");`;
+    buttons[index] = document.createElement('button');
     buttons[index].textContent = item;
-    // buttons[index].setAttribute('class', 'btn');
+    buttons[index].setAttribute('id', name);
     Color.appendChild(buttons[index]);
     // buttons[index].addEventListener('click', btnClicked);
 }
