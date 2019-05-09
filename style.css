@@ -25,14 +25,19 @@ hr{
 }
 
 #icon {
-    /* width: 50%; */
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    /* margin-right: auto; */
+    /* padding: 0; */
 }
 
 .nav-icon {
     flex: 1;
-    padding: 10px 10px;
-    margin: 3px;
-    width: 160px;
+    /* padding: 10px 10px; */
+    /* width: 160px; */
+    margin: auto;
     cursor: pointer;
 }
 
