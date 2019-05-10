@@ -59,8 +59,16 @@ hr{
 }
 
 #CustomizersHolder {
+    display: flex;
+    flex-direction: row;
     flex: 1.5;
     border: 1px solid #000000;
+}
+
+#CustomizeNav{
+    height: 100%;
+    padding-right: 10px;
+    /* flex: .5; */
 }
 
 #CustomizeHeader {
@@ -71,7 +79,7 @@ hr{
     padding-top: 30px;
 }
 
-#lay {
+.lay {
     width: 20%;
     position: absolute;
     /* left: 50%;/ */
@@ -119,6 +127,6 @@ hr{
     border: 1px solid #000000;
 } */
 
-#colors, #wheels, #engines, #customs{
-    display: flex;
+#Colors, #wheels, #engines, #customs{
+    /* display: none; */
 }
