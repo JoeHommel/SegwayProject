@@ -7,6 +7,7 @@ var Engines = ['1', '2', '3'];
 var Customs = ['1', '2', '3', '4', '5', '6', '7', '8'];
 var buttons = [];
 var name = "Colors";
+var Total = 0
 
 buildButtons();
 
@@ -49,8 +50,10 @@ function buildNav() {
 
 function optionClicked(evt) {;
     console.log(this.name);
+    Total = Total + (50 * this.id.length);
     document.getElementById(`${this.name}Img`).src = `Images/Segway ${this.id}.png`;
     document.getElementById(`${this.name}Price`).innerHTML = `${this.id} : $${50 * this.id.length}`;
+    // document.getElementById("total-money").innerHTML = `$${Total}`;
 }
 
 function navClicked(name, evt) {
