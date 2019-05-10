@@ -25,9 +25,9 @@ function buildButton(item, index, arr) {
     buttons[index] = document.createElement('button');
     buttons[index].textContent = item;
     buttons[index].setAttribute('name', name);
-    buttons[index].setAttribute('id', name);
+    buttons[index].setAttribute('id', item);
     optionsholder.appendChild(buttons[index]);
-    buttons[index].addEventListener('click', btnClicked);
+    buttons[index].addEventListener('click', optionClicked);
 }
 
 function buildNav() {
@@ -47,8 +47,10 @@ function buildNav() {
     NavHolder.appendChild(Nav);
 }
 
-function btnClicked(evt) {;
-    var b = document.getElementsByName(this.id);
+function optionClicked(evt) {;
+    console.log(this.name);
+    document.getElementById(`${this.name}Img`).src = `Images/Segway ${this.id}.png`;
+    document.getElementById(`${this.name}Price`).innerHTML = `${this.id} : $${50 * this.id.length}`;
 }
 
 function navClicked(name, evt) {

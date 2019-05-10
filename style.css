@@ -79,7 +79,7 @@ hr{
     padding-top: 30px;
 }
 
-#lay {
+.lay {
     width: 20%;
     position: absolute;
     /* left: 50%;/ */
