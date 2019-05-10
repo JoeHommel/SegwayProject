@@ -56,7 +56,7 @@ function navClicked(name, evt) {
     var Unhide = document.getElementsByName(this.id);
     Unhide.forEach(e => {
         // console.log(e);
-        f.style.display = "flex";
+        e.style.display = "flex";
     });
 }
 
