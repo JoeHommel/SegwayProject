@@ -1,6 +1,6 @@
 var NavHolder = document.getElementById('CustomizeNav');
 var optionsholder = document.getElementById('Options');
-var NavOptions = ['Colors', 'Wheels', 'Engines', 'Custom options'];
+var NavOptions = ['Colors', 'Wheels', 'Engines', 'Customs'];
 var colorNames = ['Black', 'Blue', 'Green', 'Red', 'White'];
 var wheels = ['OffRoad', 'MadMax', '3'];
 var Engines = ['1', '2', '3'];
@@ -13,11 +13,11 @@ buildButtons();
 function buildButtons() {
     buildNav(); //build nav
     colorNames.forEach(buildButton); //colors
-    name = "wheels";
+    name = "Wheels";
     wheels.forEach(buildButton); //wheels
-    name = "engines";
+    name = "Engines";
     Engines.forEach(buildButton); //engines
-    name = "customs";
+    name = "Customs";
     Customs.forEach(buildButton); //custom upgrades
 }
 
@@ -25,8 +25,9 @@ function buildButton(item, index, arr) {
     buttons[index] = document.createElement('button');
     buttons[index].textContent = item;
     buttons[index].setAttribute('name', name);
+    buttons[index].setAttribute('id', name);
     optionsholder.appendChild(buttons[index]);
-    // buttons[index].addEventListener('click', btnClicked);
+    buttons[index].addEventListener('click', btnClicked);
 }
 
 function buildNav() {
@@ -39,25 +40,32 @@ function buildNav() {
         a.setAttribute('class', "nav-a");
         a.setAttribute('id', element);
         a.innerHTML = `<li class="nav-item">${element}</li>`;
-        a.addEventListener('click', btnClicked);
+        a.addEventListener('click', navClicked);
         ul.appendChild(a);
     });
     Nav.appendChild(ul);
     NavHolder.appendChild(Nav);
 }
 
-function btnClicked(name, evt) {
-    // console.log("d");
-    // var c = document.getElementsByName("Colors");
-    // console.log(c);
-    // hideOptions();
-    // document.getElementById(name).style.display = "flex";
-    // NavOptions.forEach(hideOptions);
+function btnClicked(evt) {;
+    var b = document.getElementsByName(this.id);
 }
 
-function hideOptions(item, index, arr) {
+function navClicked(name, evt) {
+    hideOptions();
+    var Unhide = document.getElementsByName(this.id);
+    Unhide.forEach(e => {
+        // console.log(e);
+        f.style.display = "flex";
+    });
+}
 
-    // var temp = document.getElementsByName(item);
-    // console.log(temp);
-    // temp[index].style.display = 'hidden';
+function hideOptions() {
+    NavOptions.forEach(element => {
+        var d = document.getElementsByName(element);
+        d.forEach(f => {
+            // console.log(f);
+            f.style.display = "none";
+        });
+    });
 }
