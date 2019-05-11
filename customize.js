@@ -67,7 +67,7 @@ function optionClicked(evt) {
     document.getElementById(`${this.name}Img`).src = `Images/Segway ${this.id}.png`;
     document.getElementById(`${this.name}Price`).innerHTML = `${this.id} : $${50 * this.id.length}`;
     console.log(colorTotal + wheelTotal + EngineTotal + CustomTotal);
-    document.getElementById("total-money").innerHTML = `$${colorTotal + wheelTotal + EngineTotal + CustomTotal}`;
+    document.getElementById("total-money").innerHTML = `$${colorTotal + wheelTotal + EngineTotal + CustomTotal + 500}`;
 }
 
 function navClicked(name, evt) {
