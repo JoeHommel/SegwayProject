@@ -7,7 +7,11 @@ var Engines = ['1', '2', '3'];
 var Customs = ['1', '2', '3', '4', '5', '6', '7', '8'];
 var buttons = [];
 var name = "Colors";
-var Total = 0
+
+var colorTotal = 0;
+var wheelTotal = 0;
+var EngineTotal = 0;
+var CustomTotal = 0;
 
 buildButtons();
 
@@ -48,12 +52,22 @@ function buildNav() {
     NavHolder.appendChild(Nav);
 }
 
-function optionClicked(evt) {;
-    console.log(this.name);
-    Total = Total + (50 * this.id.length);
+function optionClicked(evt) {
+    // console.log(this.name);
+    if (this.name == 'Colors') {
+        colorTotal = 50 * this.id.length;
+    } else if (this.name == 'Wheels') {
+        wheelTotal = 50 * this.id.length;
+    } else if (this.name == 'Engines') {
+        EngineTotal = 50 * this.id.length;
+    } else if (this.name == 'Customs') {
+        CustomTotal = 50 * this.id.length;
+    }
+    // Total = Total + (50 * this.id.length);
     document.getElementById(`${this.name}Img`).src = `Images/Segway ${this.id}.png`;
     document.getElementById(`${this.name}Price`).innerHTML = `${this.id} : $${50 * this.id.length}`;
-    // document.getElementById("total-money").innerHTML = `$${Total}`;
+    console.log(colorTotal + wheelTotal + EngineTotal + CustomTotal);
+    document.getElementById("total-money").innerHTML = `$${colorTotal + wheelTotal + EngineTotal + CustomTotal}`;
 }
 
 function navClicked(name, evt) {
