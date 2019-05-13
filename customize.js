@@ -96,16 +96,17 @@ function setBuild(color, wheel, engine, custom) {
     window.location.assign("customize.html");
 }
 
-function getBuild(){
-    var color = localStorage.getItem("color");
-    var wheel = localStorage.getItem("wheel");
-    var engine = localStorage.getItem("engine");
-    var custom = localStorage.getItem("custom");
-    localStorage.clear();
+function getBuild() {
+    if (color = localStorage.getItem("color") != null) {
+        var color = localStorage.getItem("color");
+        var wheel = localStorage.getItem("wheel");
+        var engine = localStorage.getItem("engine");
+        var custom = localStorage.getItem("custom");
+        localStorage.clear();
 
-    document.getElementById(`ColorsImg`).src = `Images/Segway ${color}.png`;
-    document.getElementById(`WheelsImg`).src = `Images/Segway ${wheel}.png`;
-    document.getElementById(`EnginesImg`).src = `Images/Segway ${engine}.png`;
-    //document.getElementById(`CustomsImg`).src = `Images/Segway ${custom}.png`;
-
+        document.getElementById(`ColorsImg`).src = `Images/Segway ${color}.png`;
+        document.getElementById(`WheelsImg`).src = `Images/Segway ${wheel}.png`;
+        document.getElementById(`EnginesImg`).src = `Images/Segway ${engine}.png`;
+        document.getElementById(`CustomsImg`).src = `Images/Segway ${custom}.png`;
+    }
 }
