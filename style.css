@@ -1,61 +1,75 @@
-hr{
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5%;
+hr {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5%;
 }
 
 #full {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #nav-head {
-    height: 60px;
+  height: 60px;
 }
 
 .navbar-top {
-    padding-top: 0px;
+  padding-top: 0px;
 }
 
 .nav-item {
-    margin: auto;
-    user-select: none;
-    cursor: pointer;
+  margin: auto;
+  user-select: none;
+  cursor: pointer;
 }
 
 #icon {
-    width: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-right: auto; */
-    /* padding: 0; */
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-right: auto; */
+  /* padding: 0; */
 }
 
 .nav-icon {
-    flex: 1;
-    /* padding: 10px 10px; */
-    /* width: 160px; */
-    margin: auto;
-    cursor: pointer;
+  flex: 1;
+  /* padding: 10px 10px; */
+  /* width: 160px; */
+  margin: auto;
+  cursor: pointer;
 }
 
 #content {
-    display: flex;
-    flex-direction: row;
-    flex: 10;
-    overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex: 10;
+  overflow: auto;
 }
 
 #customize-content {
-    display: flex;
-    flex-direction: row;
-    flex: 10;
+  display: flex;
+  flex-direction: row;
+  flex: 10;
+}
+
+.lay {
+  width: 20%;
+  position: absolute;
+  /* left: 50%;/ */
+  margin-left: 8%;
+  /* margin-top: 2%; */
 }
 
 #imgHolder {
-    flex: 1;
+  flex: 1;
+}
+
+#CustomizeNav {
+    height: 100%;
+    padding-right: 10px;
+    /* flex: .5; */
 }
 
 #CustomizersHolder {
@@ -65,64 +79,78 @@ hr{
     border: 1px solid #000000;
 }
 
-#CustomizeNav{
-    height: 100%;
+#options {
+
+}
+
+@media all and (max-width: 550px) {
+  #customize-content {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 2;
+  }
+  .lay {
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #CustomizeNav {
+    height: 176px;
     padding-right: 10px;
     /* flex: .5; */
+    overflow: auto;
+  }
+  #CustomizersHolder {
+    height: 176px;
+  }
 }
 
 #CustomizeHeader {
-    text-align: center;
-    flex: 1;
-    /* margin-left: 20%; */
-    padding: 10px;
-    padding-top: 30px;
+  text-align: center;
+  flex: 1;
+  /* margin-left: 20%; */
+  padding: 10px;
+  padding-top: 30px;
 }
 
-.lay {
-    width: 20%;
-    position: absolute;
-    /* left: 50%;/ */
-    margin-left: 8%;
-    /* margin-top: 2%; */
+#prices {
+  margin-top: 70%;
+  text-align: right;
+  padding-right: 25%;
 }
 
-#prices{
-    margin-top: 70%;
-    text-align: right;
-    padding-right: 25%;
-}
-
-#total-money{
-    padding-left: 60%;
+#total-money {
+  padding-left: 60%;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    text-decoration: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
-    padding: 2px 16px;
+  padding: 2px 16px;
 }
 
 .horizontal {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .horizontal li {
-    display: inline-block;
-    width: 300px;
-    height: 300px;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
 }
 
 /* #Seg-img-cont{
@@ -140,4 +168,9 @@ hr{
 
 [name = Wheels], [name = Engines], [name = Customs]{
     display: none;
+#Colors,
+#wheels,
+#engines,
+#customs {
+  /* display: none; */
 }
