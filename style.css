@@ -101,9 +101,11 @@ hr {
     padding-right: 10px;
     /* flex: .5; */
     overflow: auto;
+
   }
   #CustomizersHolder {
     height: 176px;
+    border: none;
   }
 }
 
@@ -168,9 +170,4 @@ hr {
 
 [name = Wheels], [name = Engines], [name = Customs]{
     display: none;
-#Colors,
-#wheels,
-#engines,
-#customs {
-  /* display: none; */
 }
