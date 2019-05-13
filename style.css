@@ -102,6 +102,8 @@ hr{
     transition: 0.3s;
     width: 100%;
     border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .card:hover {
