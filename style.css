@@ -125,8 +125,9 @@ hr {
   padding-right: 25%;
 }
 
-#total-money {
-  padding-left: 60%;
+#total-money, #Discount {
+  text-align: right;
+  padding-right: 25%;
 }
 
 .card {
