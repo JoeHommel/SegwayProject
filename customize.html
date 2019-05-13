@@ -10,7 +10,7 @@
     <title>Custom</title>
 </head>
 
-<body>
+<body onload="buildButtons(), getBuild()">
     <div id="full">
         <ul id="nav-head" class="navbar-top light">
             <li class="nav-a nav-icon">
@@ -31,11 +31,11 @@
             <li class="nav-spacer">
                 <a></a>
             </li>
-            <a class="nav-a nav-item" href="about.html">
+            <!-- <a class="nav-a nav-item" href="about.html">
                 <li>
                     About
                 </li>
-            </a>
+            </a> -->
         </ul>
         <div id="customize-content">
             <div id="CustomizersHolder">
@@ -55,14 +55,14 @@
                 </div>
                 <div>
                     <ul id="prices">
+                        <li>Segway: $1000</li>
                         <li id="ColorsPrice"></li>
                         <li id="WheelsPrice"></li>
                         <li id="EnginesPrice"></li>
                         <li id="CustomsPrice"></li>
                     </ul>
-
                     <hr>
-                    <h4 id="total-money">$500</h4>
+                    <h4 id="total-money">$1000</h4>
                 </div>
             </div>
             <!-- Create more imgs in js, and remove them -->
