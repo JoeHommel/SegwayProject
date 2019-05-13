@@ -134,6 +134,10 @@ hr{
     display: none;
 } */
 
+[name = Colors] {
+    display: flex;
+}
+
 [name = Wheels], [name = Engines], [name = Customs]{
     display: none;
 }
