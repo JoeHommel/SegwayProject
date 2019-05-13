@@ -60,6 +60,7 @@ hr {
   /* left: 50%;/ */
   margin-left: 8%;
   /* margin-top: 2%; */
+  
 }
 
 #imgHolder {
@@ -101,6 +102,7 @@ hr {
     padding-right: 10px;
     /* flex: .5; */
     overflow: auto;
+    width: 50%;
 
   }
   #CustomizersHolder {
