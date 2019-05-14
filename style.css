@@ -80,8 +80,8 @@ hr {
     border: 1px solid #000000;
 }
 
-#options {
-
+#Options {
+  display: inline-block;
 }
 
 @media all and (max-width: 550px) {
@@ -108,6 +108,13 @@ hr {
   #CustomizersHolder {
     height: 176px;
     border: none;
+  }
+  #Options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 30.4px;
+
   }
 }
 
