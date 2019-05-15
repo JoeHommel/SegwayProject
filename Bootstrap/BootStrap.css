@@ -328,6 +328,7 @@ button:hover {
   width: 80%;
   margin: auto;
   margin-top: 5%;
+  text-align: center;
 }
 
 .modal-header {

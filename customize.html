@@ -10,7 +10,7 @@
     <title>Custom</title>
 </head>
 
-<body onload="buildBase(), buildButtons(), getBuild()">
+<body onload="buildBase(), buildButtons(), getBuild(), buildModal()">
     <div id="full">
         <ul id="nav-head" class="navbar-top light">
             <li class="nav-a nav-icon">
@@ -33,10 +33,23 @@
             </li>
         </ul>
         <div id="segway"></div>
-        </div> 
+        <!-- <button id="openModal">Open Modal</button> -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Thank you for buying</h2>
+                </div>
+                <div class="modal-body">
+                    <p>your order will be shipped to you within 4-38 buisness months</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src='customize.js'></script>
     <!-- <script src='Bootstrap/dropdown.js'></script> -->
 </body>
+<script src='Bootstrap/modal.js'></script>
 
 </html>
