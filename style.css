@@ -84,6 +84,15 @@ hr {
   display: inline-block;
 }
 
+#openModal{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  width: 50%;
+  margin: auto;
+}
+
 @media all and (max-width: 550px) {
   #segway {
     display: flex;

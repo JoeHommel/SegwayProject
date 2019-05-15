@@ -120,6 +120,12 @@ function buildBase() {
     var totalmoney = document.createElement('h4');
     totalmoney.setAttribute('id', "total-money");
     document.getElementById('priceHolder').appendChild(totalmoney);
+
+    var modal = document.createElement('button');
+    modal.setAttribute('id', "openModal");
+    modal.innerHTML = "Buy"
+    document.getElementById('priceHolder').appendChild(modal);
+
 }
 
 function buildButton(item, index, arr) {
