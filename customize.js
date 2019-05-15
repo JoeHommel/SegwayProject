@@ -2,9 +2,9 @@ var NavHolder = document.getElementById('CustomizeNav');
 var optionsholder = document.getElementById('Options');
 var NavOptions = ['Colors', 'Wheels', 'Engines', 'Customs'];
 var colorNames = ['Black', 'Blue', 'Green', 'Red', 'White'];
-var wheels = ['OffRoad', 'MadMax', 'Slim-Tires'];
-var Engines = ['Diesel', 'Muscle', 'Solar'];
-var Customs = ['1', '2', '3', '4', '5', '6', '7', '8'];
+var wheels = ['OffRoad', 'MadMax', 'Slim-Tires', 'Empty'];
+var Engines = ['Diesel', 'Muscle', 'Solar', 'Empty'];
+var Customs = ['Tall', 'Horn', '3', '4', '5', '6', '7', '8', 'Empty'];
 var buttons = [];
 var name = "Colors";
 
@@ -102,7 +102,6 @@ function getBuild() {
         document.getElementById("baseSegway").innerHTML = ``;
         document.getElementById("Discount").innerHTML = `Discount : - $${300}`;
 
-        document.getElementById("total-money").innerHTML = `$${colorTotal + wheelTotal + EngineTotal + CustomTotal + baseCost - 300}`;
         var color = localStorage.getItem("color");
         var wheel = localStorage.getItem("wheel");
         var engine = localStorage.getItem("engine");
@@ -113,5 +112,17 @@ function getBuild() {
         document.getElementById(`WheelsImg`).src = `Images/Segway ${wheel}.png`;
         document.getElementById(`EnginesImg`).src = `Images/Segway ${engine}.png`;
         document.getElementById(`CustomsImg`).src = `Images/Segway ${custom}.png`;
+
+        document.getElementById(`ColorsPrice`).innerHTML = `${color} : $${50 * color.length}`;
+        colorTotal = 50 * color.length;
+        document.getElementById(`WheelsPrice`).innerHTML = `${wheel} : $${50 * wheel.length}`;
+        wheelTotal = 50 * wheel.length;
+        document.getElementById(`EnginesPrice`).innerHTML = `${engine} : $${50 * engine.length}`;
+        EngineTotal = 50 * engine.length;
+        document.getElementById(`CustomsPrice`).innerHTML = `${custom} : $${50 * custom.length}`;
+        CustomTotal = 50 * custom.length;
+        console.log(CustomTotal);
+        // document.getElementById("Discount").innerHTML = ``;
+        document.getElementById("total-money").innerHTML = `$${colorTotal + wheelTotal + EngineTotal + CustomTotal + baseCost - 300}`;
     }
 }
