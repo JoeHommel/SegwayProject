@@ -48,7 +48,7 @@ hr {
   overflow: auto;
 }
 
-#customize-content {
+#segway {
   display: flex;
   flex-direction: row;
   flex: 10;
@@ -85,7 +85,7 @@ hr {
 }
 
 @media all and (max-width: 550px) {
-  #customize-content {
+  #segway {
     display: flex;
     flex-direction: column-reverse;
     flex: 2;

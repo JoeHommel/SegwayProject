@@ -1,5 +1,3 @@
-var NavHolder = document.getElementById('CustomizeNav');
-var optionsholder = document.getElementById('Options');
 var NavOptions = ['Colors', 'Wheels', 'Engines', 'Customs'];
 var colorNames = ['Black', 'Blue', 'Green', 'Red', 'White'];
 var wheels = ['OffRoad', 'MadMax', 'Slim-Tires', 'Empty'];
@@ -27,7 +25,105 @@ function buildButtons() {
     Customs.forEach(buildButton); //custom upgrades
 }
 
+function buildBase() {
+    var customizerHolder = document.createElement('div');
+    customizerHolder.setAttribute('id', "CustomizersHolder");
+
+    var CustomizeNav = document.createElement('div');
+    CustomizeNav.setAttribute('id', "CustomizeNav");
+
+    var Options = document.createElement('div');
+    Options.setAttribute('id', "Options");
+
+    document.getElementById('segway').appendChild(customizerHolder);
+    document.getElementById('CustomizersHolder').appendChild(CustomizeNav);
+    document.getElementById('CustomizersHolder').appendChild(Options);
+
+    var imgHolder = document.createElement('div');
+    imgHolder.setAttribute('id', "imgHolder");
+    document.getElementById('segway').appendChild(imgHolder);
+
+    var CustomizeHeader = document.createElement('h4');
+    CustomizeHeader.innerHTML = "Customize your segway";
+    document.getElementById('imgHolder').appendChild(CustomizeHeader);
+
+    var Segimgcont = document.createElement('div');
+    Segimgcont.setAttribute('id', "Seg-img-cont");
+    document.getElementById('imgHolder').appendChild(Segimgcont);
+
+    var baseimg = document.createElement('img');
+    baseimg.setAttribute('id', "baseImg");
+    baseimg.setAttribute('class', "lay");
+    baseimg.setAttribute('src', "Images/Segway Black.png");
+    document.getElementById('Seg-img-cont').appendChild(baseimg);
+
+    var Colorimg = document.createElement('img');
+    Colorimg.setAttribute('id', "ColorsImg");
+    Colorimg.setAttribute('class', "lay");
+    // Colorimg.setAttribute('src', "");
+    document.getElementById('Seg-img-cont').appendChild(Colorimg);
+
+    var WheelsImg = document.createElement('img');
+    WheelsImg.setAttribute('id', "WheelsImg");
+    WheelsImg.setAttribute('class', "lay");
+    // WheelsImg.setAttribute('src', "");
+    document.getElementById('Seg-img-cont').appendChild(WheelsImg);
+
+    var CustomsImg = document.createElement('img');
+    CustomsImg.setAttribute('id', "CustomsImg");
+    CustomsImg.setAttribute('class', "lay");
+    CustomsImg.setAttribute('src', "");
+    document.getElementById('Seg-img-cont').appendChild(CustomsImg);
+
+    var EnginesImg = document.createElement('img');
+    EnginesImg.setAttribute('id', "EnginesImg");
+    EnginesImg.setAttribute('class', "lay");
+    // EnginesImg.setAttribute('src', "");
+    document.getElementById('Seg-img-cont').appendChild(EnginesImg);
+
+    var priceholder = document.createElement('div');
+    priceholder.setAttribute('id', "priceHolder");
+    document.getElementById('imgHolder').appendChild(priceholder);
+
+    var prices = document.createElement('ul');
+    prices.setAttribute('id', "prices");
+    document.getElementById('priceHolder').appendChild(prices);
+
+    var baseSegway = document.createElement('li');
+    baseSegway.setAttribute('id', "baseSegway");
+    baseSegway.innerHTML = "Segway: $1000";
+    document.getElementById('prices').appendChild(baseSegway);
+    
+    var ColorsPrice = document.createElement('li');
+    ColorsPrice.setAttribute('id', "ColorsPrice");
+    document.getElementById('prices').appendChild(ColorsPrice);
+    
+    var WheelsPrice = document.createElement('li');
+    WheelsPrice.setAttribute('id', "WheelsPrice");
+    document.getElementById('prices').appendChild(WheelsPrice);
+    
+    var EnginesPrice = document.createElement('li');
+    EnginesPrice.setAttribute('id', "EnginesPrice");
+    document.getElementById('prices').appendChild(EnginesPrice);
+    
+    var CustomsPrice = document.createElement('li');
+    CustomsPrice.setAttribute('id', "CustomsPrice");
+    document.getElementById('prices').appendChild(CustomsPrice);
+    
+    var hr = document.createElement('hr');
+    document.getElementById('priceHolder').appendChild(hr);
+
+    var Discount = document.createElement('h4');
+    Discount.setAttribute('id', "Discount");
+    document.getElementById('priceHolder').appendChild(Discount);
+
+    var totalmoney = document.createElement('h4');
+    totalmoney.setAttribute('id', "total-money");
+    document.getElementById('priceHolder').appendChild(totalmoney);
+}
+
 function buildButton(item, index, arr) {
+    var optionsholder = document.getElementById('Options');
     buttons[index] = document.createElement('button');
     buttons[index].textContent = item;
     buttons[index].setAttribute('name', name);
@@ -37,6 +133,7 @@ function buildButton(item, index, arr) {
 }
 
 function buildNav() {
+    var NavHolder = document.getElementById('CustomizeNav');
     Nav = document.createElement('div');
     Nav.setAttribute('class', "navbar-side");
     ul = document.createElement('ul');
