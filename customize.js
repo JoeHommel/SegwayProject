@@ -4,7 +4,7 @@ var NavOptions = ['Colors', 'Wheels', 'Engines', 'Customs'];
 var colorNames = ['Black', 'Blue', 'Green', 'Red', 'White'];
 var wheels = ['OffRoad', 'MadMax', 'Slim-Tires', 'Empty'];
 var Engines = ['Diesel', 'Muscle', 'Solar', 'Empty'];
-var Customs = ['Tall', 'Horn', '3', '4', '5', '6', '7', '8', 'Empty'];
+var Customs = ['Tall', 'Horn', 'Chair', 'Chain', 'Phone', 'Basket', 'Baby', 'Training', 'Empty'];
 var buttons = [];
 var name = "Colors";
 
