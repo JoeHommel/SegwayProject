@@ -85,12 +85,14 @@ hr {
 }
 
 #openModal{
-  display: flex;
   text-align: center;
-  align-items: center;
   height: 50px;
   width: 50%;
   margin: auto;
+}
+
+#priceHolder {
+  text-align: center;
 }
 
 @media all and (max-width: 550px) {
